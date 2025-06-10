@@ -2,91 +2,75 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eSIM Guinée</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #009879;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .container {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: auto;
-            background-color: white;
-        }
-        .how-it-works h2 {
-            color: #009879;
-        }
-        .how-it-works ul {
-            padding-left: 20px;
-        }
-        .how-it-works li {
-            margin-bottom: 15px;
-        }
-        .cta-button {
-            display: inline-block;
-            margin: 30px 0;
-            padding: 15px 30px;
-            background-color: #25D366;
-            color: white;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f0f0f0;
-            font-size: 0.9em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Service rapide de eSIM pour la Guinée. Commande en ligne via WhatsApp. Idéal pour diaspora, voyageurs et résidents.">
+  <meta name="keywords" content="eSIM Guinea, eSIM Africa, virtual SIM, prepaid eSIM, Guinean diaspora, eSIM travel">
+  <title>eSIM Guinée – Achetez votre eSIM en ligne</title>
+  <style>
+    body { font-family: Arial; margin: 0; padding: 0; background: #f4f4f4; color: #333; text-align: center; }
+    header { background: #006400; color: white; padding: 20px; }
+    .content { padding: 20px; }
+    .lang-switch { margin: 10px; cursor: pointer; font-weight: bold; color: #006400; }
+    .btn { background-color: #28a745; color: white; padding: 12px 25px; margin: 15px; text-decoration: none; border-radius: 5px; font-size: 16px; }
+    footer { margin-top: 40px; font-size: 14px; }
+    .hidden { display: none; }
+  </style>
 </head>
 <body>
+  <header>
+    <h1 id="title">Bienvenue sur eSIM Guinée</h1>
+    <div class="lang-switch" onclick="toggleLang()">🌐 FR / EN</div>
+  </header>
 
-    <header>
-        <h1>eSIM Guinée</h1>
-        <p>Activez votre eSIM en un clic, depuis la Guinée ou l’étranger !</p>
-        <a class="cta-button" href="https://wa.me/224620330855" target="_blank">Commander sur WhatsApp</a>
-    </header>
-
-    <div class="container">
-        <section class="how-it-works">
-            <h2>Comment ça marche ?</h2>
-            <ul>
-                <li><strong>1.</strong> Choisissez votre forfait eSIM adapté à votre besoin (local ou international).</li>
-                <li><strong>2.</strong> Payez via Mobile Money, Orange Money ou autre méthode simple.</li>
-                <li><strong>3.</strong> Recevez votre eSIM (QR Code) par WhatsApp ou Email en quelques minutes.</li>
-            </ul>
-        </section>
-
-        <div style="text-align: center;">
-            <a class="cta-button" href="https://wa.me/224620330855" target="_blank">Commander maintenant</a>
-        </div>
+  <div class="content">
+    <div id="fr">
+      <p>Commandez facilement votre eSIM en Guinée 🇬🇳.</p>
+      <p>Service idéal pour la diaspora, les voyageurs et les résidents locaux.</p>
+      <a href="https://wa.me/224620330855" class="btn">Commander par WhatsApp</a>
+      <h2>Pourquoi choisir eSIM Guinée ?</h2>
+      <ul style="text-align:left; max-width:600px; margin:0 auto;">
+        <li>✅ Activation rapide en moins de 10 minutes</li>
+        <li>✅ Support client disponible sur WhatsApp</li>
+        <li>✅ Tarifs transparents et adaptés à vos besoins</li>
+        <li>✅ Idéal pour la diaspora et les touristes</li>
+        <li>✅ Pas besoin de carte physique : tout est 100% digital</li>
+      </ul>
     </div>
-
+    <div id="en" class="hidden">
+      <p>Easily order your eSIM for Guinea 🇬🇳.</p>
+      <p>Perfect service for the diaspora, travelers and local residents.</p>
+      <a href="https://wa.me/224620330855" class="btn">Order via WhatsApp</a>
+      <h2>Why choose eSIM Guinée?</h2>
+      <ul style="text-align:left; max-width:600px; margin:0 auto;">
+        <li>✅ Fast activation in under 10 minutes</li>
+        <li>✅ Customer support available on WhatsApp</li>
+        <li>✅ Transparent and flexible pricing</li>
+        <li>✅ Ideal for diaspora and tourists</li>
+        <li>✅ 100% digital – no physical card needed</li>
+      </ul>
+    </div>
     <footer>
-        © 2025 eSIM Guinée | WhatsApp : +224 620 330 855
+      <p>📧 <a href="mailto:esimguinee@proton.me">esimguinee@proton.me</a> | 📱 WhatsApp : +224 620 33 08 55</p>
+      <p>© 2025 eSIM Guinée – Tous droits réservés</p>
     </footer>
+  </div>
 
+  <script>
+    function toggleLang() {
+      const fr = document.getElementById('fr');
+      const en = document.getElementById('en');
+      const title = document.getElementById('title');
+      if (fr.classList.contains('hidden')) {
+        fr.classList.remove('hidden');
+        en.classList.add('hidden');
+        title.innerText = 'Bienvenue sur eSIM Guinée';
+      } else {
+        fr.classList.add('hidden');
+        en.classList.remove('hidden');
+        title.innerText = 'Welcome to eSIM Guinée';
+      }
+    }
+  </script>
 </body>
 </html>
